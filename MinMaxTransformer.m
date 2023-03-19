@@ -1,4 +1,5 @@
-# Preparing Min Max (-1,1) Matrix for regression (LLE data)
+## Preparing Min Max (-1,1) Matrix for regression (LLE data)
+## useage:	x_minmax = MinMaxTransformer(x)
 
 function trans_x_values = MinMaxTransformer(x_values)
 x_min = min(x_values)

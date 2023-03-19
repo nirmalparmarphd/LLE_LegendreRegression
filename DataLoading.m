@@ -1,4 +1,6 @@
-# loading csv LLE data
+## To load, clean and sort LLE data from data.csv file
+## useage:	data = DataLoading('data.csv')
+
 function data = DataLoading(filename);
 data_raw = csvread(filename);
 format short g

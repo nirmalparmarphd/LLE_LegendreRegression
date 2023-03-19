@@ -1,4 +1,5 @@
-# LLE Data Parser
+## LLE Data Parser, to select X values and Y values from the data
+## useage:	[x, y] = DataParser(data)
 
 function [x_values, y_values] = DataParser(data)
 
