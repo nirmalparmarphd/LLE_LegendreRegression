@@ -18,8 +18,9 @@ x_minmax_matirx = MinMaxTransformer(x_values)
 
 # creating legendre matrix for x transformed values
 x_legendre_matrix = mklegendrematrix(x_minmax_matirx, 2)
-# x - y values matirix for GrregX
-xy_matrix = [x_legendre_matrix, y_values]
+# x - y values structure for GrregX
+xy_matrix.x = x_legendre_matrix;
+xy_matrix.y = y_values;
 
 # GrregX on xy matrix
 grregx_result = GrregX(xy_matrix)
