@@ -10,6 +10,6 @@ para.data = resid;
 [result, intv, LowerCluster, UpperCluster, ERR] = zw_marginal_analysis_egdf(para);
 # gnp file generation and pdf
 gnp = prepgnplot(result);
-fileoutput = strcat("data/", "gnp-",strrep(filename,'.csv',''), ".text);
+fileoutput = strcat("data/", "gnp-",strrep(filename,'.csv',''), ".text");
 gnsvplot(gnp, fileoutput);
 endfunction
