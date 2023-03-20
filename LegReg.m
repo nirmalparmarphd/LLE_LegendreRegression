@@ -17,8 +17,6 @@ if not(isfolder('plots'))
 end
 
 ## loading lle data
-plottitle = strrep(filename,'.csv','');
-plotoutput = strcat("plots/",strrep(filename,'.csv',''),".pdf");
 lle_data = DataLoading(strcat("data/",filename))
 
 ## Data parsing to get X and Y values from LLE data
@@ -42,13 +40,5 @@ LegReg_result = GrregX(xy_matrix)
 coefficients = LegReg_result.coef;
 residuals = LegReg_result.resid;
 fitY = LegReg_result.fitY;
-
-## plotting results 
-plot(x_values, y_values,'ok', x_values, fitY, '*r')
-xlabel('mol fraction [x]')
-ylabel('Temperature [K]')
-legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LReg'))
-title(plottitle)
-print(plotoutput)
 
 endfunction
