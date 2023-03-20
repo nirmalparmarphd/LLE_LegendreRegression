@@ -1,2 +1,3 @@
-data/*
-plots/*
+data/*.csv
+plots/*.pdf
+try.m
