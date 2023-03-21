@@ -11,4 +11,4 @@ intv = ResidualMG(filename, LegReg_result.resid);
 plt = RegPlot(filename, LegReg_result.fitY, fn);
 
 # plotting residuals
-plt_res = ResidPlot(filename, LegReg_result.resid, LegReg_result.y,fn);
+plt_res = ResidPlot(filename, LegReg_result, intv, fn);
