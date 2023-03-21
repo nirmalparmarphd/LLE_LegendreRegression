@@ -4,6 +4,12 @@
 
 
 function plt = RegPlot(filename, fitY, fn);
+## checking plot direcotry
+dirpath = strcat('data/', strrep(filename,'.csv',''))
+if not(isfolder(dirpath))
+    mkdir(dirpath)
+end
+
 ## loading lle data
 plottitle = strrep(filename,'.csv','');
 lle_data = DataLoading(strcat("data/",filename));
@@ -13,22 +19,24 @@ lle_data = DataLoading(strcat("data/",filename));
 
 ## plotting results
 if fn == 'X';
+# fitY plot for mole fraction
 plot((2*x_values-1), y_values,'ok', (2*x_values-1), fitY, '-r')
 xlabel('mole fraction [x]')
 ylabel('Temperature [K]')
 legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
 title(plottitle)
-plotoutput = strcat("plots/",strrep(filename,'.csv',''), "-X",".pdf");
+plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-X",".pdf");
 print(plotoutput)
 plt = strcat('plot saved as_', plotoutput)
 disp(plt)
 elseif fn == 'T';
+# fitY plot for Temperature
 plot((2*x_values-1), y_values,'ok', (2*x_values-1), fitY, '-r')
 ylabel('mole fraction [x]')
 xlabel('Temperature [K]')
 legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
 title(plottitle)
-plotoutput = strcat("plots/",strrep(filename,'.csv',''), "-T",".pdf");
+plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-T",".pdf");
 print(plotoutput)
 plt = strcat('plot saved as-->', plotoutput)
 disp(plt)

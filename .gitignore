@@ -1,3 +1,4 @@
 data/*.csv
 plots/*.pdf
 try.m
+octave-workspace

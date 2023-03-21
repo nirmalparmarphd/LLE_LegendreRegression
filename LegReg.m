@@ -13,8 +13,10 @@ if not(isfolder('data'))
     mkdir('data')
 end
 
-if not(isfolder('plots'))
-    mkdir('plots')
+## creating example specific directory
+dirpath = strcat('data/', strrep(filename,'.csv',''))
+if not(isfolder(dirpath))
+    mkdir(dirpath)
 end
 
 ## loading lle data
@@ -28,13 +30,11 @@ x_minmax_matirx = MinMaxTransformer(x_values);
 
 ## regression of LLE data 
 # GrregX, mklegendrematrix, legendreclenshaw, legendrepol
-
 # creating legendre matrix for x transformed values
 x_legendre_matrix = mklegendrematrix(x_minmax_matirx, order);
 # x - y values structure for GrregX
 xy_matrix.x = x_legendre_matrix;
 xy_matrix.y = y_values;
-
 # GrregX on xy matrix
 LegReg_result = GrregX(xy_matrix)
 # coefficient from GrregX
@@ -42,4 +42,8 @@ coefficients = LegReg_result.coef;
 residuals = LegReg_result.resid;
 fitY = LegReg_result.fitY;
 
+## saving LegReg results as mat file
+matpath = strcat(dirpath, '/')
+save([matpath,'LegReg_result.mat'], 'LegReg_result')
+save([matpath,'LegReg_coef.mat'], 'coefficients')
 endfunction

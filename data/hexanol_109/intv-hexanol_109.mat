@@ -1,0 +1,75 @@
+# Created by Octave 7.3.0, Tue Mar 21 15:10:08 2023 CET <parmar@nirmal>
+# name: intv
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 6
+# name: inf
+# type: matrix
+# rows: 1
+# columns: 5
+ 3.8909150053504367 7.6790931975441223 8.2579809033185629 8.9283697187253548 17.526532578018145
+
+
+# name: fin
+# type: matrix
+# rows: 1
+# columns: 5
+ -1.3488628774538349 -0.10671061155820283 -0.0049594514916160293 0.09836612954476287 0.76964637166105199
+
+
+# name: EL
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 5
+# name: ddf
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.10471874917420512 0.20144855143098855 0.21288446547736922 0.22529690836174709 0.33795463472827664
+
+
+# name: ddi
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.23507240824419301 0.28961611528834907 0.2901166288234685 0.2895666597340697 0.25113637646776238
+
+
+# name: pdf
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.28174849460824059 0.4649077508368939 0.48598097326432993 0.50861124244343459 0.69374970428738947
+
+
+# name: Ptolerance
+# type: scalar
+0.04370349160654069
+
+
+# name: Ptypical
+# type: scalar
+0.41200120967914888
+
+
+
+
+# name: LB
+# type: scalar
+-68.681389707080029
+
+
+# name: UB
+# type: scalar
+1.5702663491660056
+
+
+# name: robmed
+# type: scalar
+0.033263807758674879
+
+
+
+
