@@ -1,9 +1,10 @@
 ## LLE Data Analysis with Legendre gnostic regression 
-## usage:   LegReg_result = DataAnalysisLLE(filename,order)
+## usage:   LegReg_result = LegReg(filename,order,fn)
 ##          filename: ../data/filename.csv
 ##          order: polynomial degree
+##          fn = (X or T) select regression dependent variable
 
-function LegReg_result = LegReg(filename, order);
+function LegReg_result = LegReg(filename, order, fn);
 ## pkg import
 pkg load io
 
@@ -20,7 +21,7 @@ end
 lle_data = DataLoading(strcat("data/",filename))
 
 ## Data parsing to get X and Y values from LLE data
-[x_values, y_values] = DataParser(lle_data);
+[x_values, y_values] = DataParser(lle_data,fn);
 
 ## MinMax transformaation of X vaues from LLE data
 x_minmax_matirx = MinMaxTransformer(x_values);
