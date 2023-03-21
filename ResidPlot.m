@@ -15,19 +15,23 @@ if not(isfolder(dirpath))
 end
 
 # defined intv values
-tl_intv = intv.fin(4) - intv.fin(2);
-di_intv = intv.fin(5) - intv.fin(1);
+tl_ub_intv = intv.fin(4) - intv.fin(3);
+tl_lb_intv = intv.fin(3) - intv.fin(2);
+di_ub_intv = intv.fin(5) - intv.fin(3);
+di_lb_intv = intv.fin(3) - intv.fin(1);
 lb_intv = intv.LB;
 ub_intv = intv.UB;
-
+di_intv = di_lb_intv + di_ub_intv;
 # plotting result for X residuals
 if fn == 'X';
 plot(result.y, result.resid, 'ob');
 hold on
 # plotting errorbar
-errorbar(median(result.y), intv.fin(3), di_intv, '-b',median(result.y), intv.fin(3), tl_intv,'#~r');
+errorbar(median(result.y), intv.fin(3), di_lb_intv, di_ub_intv,'-k');
+errorbar(median(result.y), intv.fin(3), tl_lb_intv, tl_ub_intv, '#~r');
+
 # plotting UB LB
-    if abs(lb_intv) < (2*di_intv);
+    if abs(lb_intv) < (3*di_intv);
     plot([min(result.y), max(result.y)],[lb_intv, lb_intv], '--k');
     elseif abs(ub_intv) < (2*di_intv);
     plot([min(result.y), max(result.y)],[ub_intv, ub_intv], 'k');

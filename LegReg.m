@@ -43,7 +43,7 @@ residuals = LegReg_result.resid;
 fitY = LegReg_result.fitY;
 
 ## saving LegReg results as mat file
-matpath = strcat(dirpath, '/')
-save([matpath,'LegReg_result.mat'], 'LegReg_result')
-save([matpath,'LegReg_coef.mat'], 'coefficients')
+matpath = strcat(dirpath, '/');
+save([matpath,'LegReg_result.mat'], 'LegReg_result');
+save([matpath,'LegReg_coef.mat'], 'coefficients');
 endfunction
