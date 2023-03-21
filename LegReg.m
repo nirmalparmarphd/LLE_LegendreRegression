@@ -46,4 +46,5 @@ fitY = LegReg_result.fitY;
 matpath = strcat(dirpath, '/');
 save([matpath,'LegReg_result.mat'], 'LegReg_result');
 save([matpath,'LegReg_coef.mat'], 'coefficients');
+csvwrite([matpath,'LegReg_result.csv'], coefficients);
 endfunction

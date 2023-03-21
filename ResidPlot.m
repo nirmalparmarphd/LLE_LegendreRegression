@@ -21,7 +21,8 @@ di_ub_intv = intv.fin(5) - intv.fin(3);
 di_lb_intv = intv.fin(3) - intv.fin(1);
 lb_intv = intv.LB;
 ub_intv = intv.UB;
-di_intv = di_lb_intv + di_ub_intv;
+di_intv = abs(di_lb_intv) + abs(di_ub_intv);
+
 # plotting result for X residuals
 if fn == 'X';
 plot(result.y, result.resid, 'ob');
@@ -29,13 +30,13 @@ hold on
 # plotting errorbar
 errorbar(median(result.y), intv.fin(3), di_lb_intv, di_ub_intv,'-k');
 errorbar(median(result.y), intv.fin(3), tl_lb_intv, tl_ub_intv, '#~r');
-
 # plotting UB LB
-    if abs(lb_intv) < (3*di_intv);
-    plot([min(result.y), max(result.y)],[lb_intv, lb_intv], '--k');
-    elseif abs(ub_intv) < (2*di_intv);
-    plot([min(result.y), max(result.y)],[ub_intv, ub_intv], 'k');
-    endif
+if abs(lb_intv) < (3*di_intv);
+plot([min(result.y), max(result.y)],[lb_intv, lb_intv], '--r');
+endif
+if abs(ub_intv) < (3*di_intv);
+plot([min(result.y), max(result.y)],[ub_intv, ub_intv], '--r');
+endif
 hold off
 xlabel('Tempearature [K]');
 ylabel('Residuals');
@@ -44,18 +45,22 @@ plotoutput=strcat(dirpath, "/", strrep(filename,'.csv',''), "-Resid-T",".pdf");
 print(plotoutput);
 plt = strcat('plot saved as_', plotoutput);
 disp(plt)
+
 # plotting result for T residuals
 elseif fn == 'T';
 plot(result.y, result.resid, 'ob');
 hold on
 # plotting errorbar
-errorbar(median(result.y), intv.fin(3), di_intv, '-b',median(result.y), intv.fin(3), tl_intv,'#~r');
+# plotting errorbar
+errorbar(median(result.y), intv.fin(3), di_lb_intv, di_ub_intv,'-k');
+errorbar(median(result.y), intv.fin(3), tl_lb_intv, tl_ub_intv, '#~r');
 # plotting UB LB
-    if abs(lb_intv) < (2*di_intv);
-    plot([min(result.y), max(result.y)],[lb_intv, lb_intv], '--k');
-    elseif abs(ub_intv) < (2*di_intv);
-    plot([min(result.y), max(result.y)],[ub_intv, ub_intv], 'k');
-    endif
+if abs(lb_intv) < (3*di_intv);
+plot([min(result.y), max(result.y)],[lb_intv, lb_intv], '--r');
+endif
+if abs(ub_intv) < (3*di_intv);
+plot([min(result.y), max(result.y)],[ub_intv, ub_intv], '--r');
+endif
 hold off
 xlabel('Mole Fraction');
 ylabel('Residuals');

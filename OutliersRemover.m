@@ -14,7 +14,7 @@ if not(isfolder(dirpath))
 end
 
 ## loading main data
-lle_data = DataLoading(strcat("data/",filename))
+lle_data = DataLoading(strcat("data/",filename));
 ## Data parsing to get X and Y values from LLE data
 [x_values, y_values] = DataParser(lle_data,fn);
 
@@ -35,7 +35,8 @@ disp(rdata)
 
 ## saving clean data without outliers
 dirpath = strcat('data/', strrep(filename,'.csv',''));
-matpath = strcat(dirpath, '/');
+matpath = strcat(dirpath, '/', fn,"-");
 save([matpath,'clean_data.mat'], 'rdata');
+csvwrite(strcat(matpath, "clean_data.csv"), rdata);
 
 endfunction
