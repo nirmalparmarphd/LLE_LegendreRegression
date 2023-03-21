@@ -12,3 +12,6 @@ plt = RegPlot(filename, LegReg_result.fitY, fn);
 
 # plotting residuals
 plt_res = ResidPlot(filename, LegReg_result, intv, fn);
+
+# estimating the outliers from residuals
+
