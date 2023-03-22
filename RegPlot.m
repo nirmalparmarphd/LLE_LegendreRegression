@@ -23,7 +23,7 @@ if fn == 'X';
 plot((2*x_values-1), y_values,'ok', (2*x_values-1), fitY, '-r')
 xlabel('mole fraction [x]')
 ylabel('Temperature [K]')
-legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
+legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'),'location','southoutside')
 title(plottitle)
 plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-X",".pdf");
 print(plotoutput)
@@ -34,7 +34,7 @@ elseif fn == 'T';
 plot((2*x_values-1), y_values,'ok', (2*x_values-1), fitY, '-r')
 ylabel('mole fraction [x]')
 xlabel('Temperature [K]')
-legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
+legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'), 'location','southoutside')
 title(plottitle)
 plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-T",".pdf");
 print(plotoutput)
