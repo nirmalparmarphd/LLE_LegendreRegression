@@ -14,7 +14,7 @@ if not(isfolder('data'))
 end
 
 ## creating example specific directory
-dirpath = strcat('data/', strrep(filename,'.csv',''))
+dirpath = strcat('data/', strrep(filename,'.csv',''));
 if not(isfolder(dirpath))
     mkdir(dirpath)
 end

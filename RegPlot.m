@@ -5,7 +5,7 @@
 
 function plt = RegPlot(filename, fitY, fn);
 ## checking plot direcotry
-dirpath = strcat('data/', strrep(filename,'.csv',''))
+dirpath = strcat('data/', strrep(filename,'.csv',''));
 if not(isfolder(dirpath))
     mkdir(dirpath)
 end
@@ -27,7 +27,7 @@ legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
 title(plottitle)
 plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-X",".pdf");
 print(plotoutput)
-plt = strcat('plot saved as_', plotoutput)
+plt = strcat('plot saved as_', plotoutput);
 disp(plt)
 elseif fn == 'T';
 # fitY plot for Temperature
@@ -38,7 +38,7 @@ legend(strcat(plottitle, '-Data'), strcat(plottitle, '-LegReg'))
 title(plottitle)
 plotoutput = strcat(dirpath,"/",strrep(filename,'.csv',''), "-T",".pdf");
 print(plotoutput)
-plt = strcat('plot saved as-->', plotoutput)
+plt = strcat('plot saved as-->', plotoutput);
 disp(plt)
 endif
 endfunction
