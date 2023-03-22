@@ -3,6 +3,10 @@
 ##          filename: ../data/filename.csv
 ##          order: polynomial degree
 ##          fn = (X or T) select regression dependent variable
+##          LegReg_result: result from legendre regression
+##          intv: intervals from MG marginal analysis
+##          plt_reg: regression plot
+##          plt_res: residual plot
 
 
 function [LegReg_result, intv, plt_reg, plt_res, rdata] = analysis(filename, order, fn);
