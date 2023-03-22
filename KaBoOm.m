@@ -1,6 +1,6 @@
 # To run a series of LLE data analysis
 
-filename = 'hexanol_109_466.csv';
+filename = 'hexanol-X-clean_data.csv';
 order = 3;
 fn = 'X';
 
