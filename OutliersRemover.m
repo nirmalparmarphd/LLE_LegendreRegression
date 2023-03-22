@@ -19,8 +19,8 @@ lle_data = DataLoading(strcat("data/",filename));
 [x_values, y_values] = DataParser(lle_data,fn);
 
 ## bounds from interval of typical data
-di_lb = intv.fin(1);
-di_ub = intv.fin(5);
+di_lb = intv.LB;
+di_ub = intv.UB;
 ## matrix of Y and residuals
 ## Exp x values. Exp y values, residual values
 mdata = [x_values, result.y, result.resid];
