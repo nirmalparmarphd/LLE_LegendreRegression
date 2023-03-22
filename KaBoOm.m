@@ -1,6 +1,6 @@
 # To run a series of LLE data analysis
 
-filename = 'propanol_175run.csv';
+filename = 'propanol_175.csv';
 order = 3;
 fn = 'X';
 
