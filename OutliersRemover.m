@@ -31,8 +31,13 @@ for i = 1:size(mdata,1);
     rdata = [rdata; mdata(i,:)];
     end
 end
+srno_h = [1: size(rdata,1)];
+srno = transpose(srno_h);
+rdata = [srno,rdata];
 disp(rdata)
 
+## rdata: srno, X, T, resid (fn=x)
+## rdata: srno, T, X, rssid (fn=T)
 ## saving clean data without outliers
 dirpath = strcat('data/', strrep(filename,'.csv',''));
 matpath = strcat(dirpath, '/', fn,"-");

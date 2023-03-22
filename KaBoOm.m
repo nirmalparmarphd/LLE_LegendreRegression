@@ -1,8 +1,8 @@
 # To run a series of LLE data analysis
 
-filename = 'hexanol_466.csv';
-order = 4;
+filename = 'X-clean_data_109_466.csv';
+order = 3;
 fn = 'X';
 
 # LLE data analysis 
-[LegReg_result, intv, plt_reg, plt_res, rdata] = analysis(filename, order, fn);
+[LegReg_result, mg_result, intv, plt_reg, plt_res, rdata] = analysis(filename, order, fn);

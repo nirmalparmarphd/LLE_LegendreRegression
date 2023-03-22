@@ -1,0 +1,75 @@
+# Created by Octave 7.3.0, Wed Mar 22 14:40:41 2023 CET <parmar@uchp-parmar.icpf.cas.cz>
+# name: intv
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 6
+# name: inf
+# type: matrix
+# rows: 1
+# columns: 5
+ 4.8969974289683664 9.2981049625535874 9.8565425404642042 10.454239086044453 19.838979346257712
+
+
+# name: fin
+# type: matrix
+# rows: 1
+# columns: 5
+ -1.6577686384183083 -0.12785569279810982 -0.020674883178000591 0.082728203174465165 0.93968035862231147
+
+
+# name: EL
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 5
+# name: ddf
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.085758743023282985 0.16022011948692474 0.1677577392518716 0.17538481997344596 0.25167106397220335
+
+
+# name: ddi
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.25192089423959152 0.30104488530879503 0.30142475214056652 0.30104016054891058 0.25381072423917633
+
+
+# name: pdf
+# type: matrix
+# rows: 1
+# columns: 5
+ 0.34173417999986333 0.52292713618380415 0.54050030479843703 0.55823825676410022 0.73971104790440756
+
+
+# name: Ptolerance
+# type: scalar
+0.035311120580296063
+
+
+# name: Ptypical
+# type: scalar
+0.39797686790454423
+
+
+
+
+# name: LB
+# type: scalar
+-112.54807385682658
+
+
+# name: UB
+# type: scalar
+2.0188808209772748
+
+
+# name: robmed
+# type: scalar
+-0.24688493820682567
+
+
+
+
