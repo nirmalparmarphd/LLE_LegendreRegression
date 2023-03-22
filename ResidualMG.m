@@ -5,11 +5,15 @@
 
 ## MG marginal analysis
 function [result, intv] = ResidualMG(filename, resid);
-para = dfchoice
+para.Type = "E";
+para.Kind = "g";
+para.Form = "a";
+para.varS = 1;
 para.data = resid;
 [result, intv, LowerCluster, UpperCluster, ERR] = zw_marginal_analysis_egdf(para);
+disp("calculating...")
 # gnp file generation and pdf
-dirpath = strcat('data/', strrep(filename,'.csv',''), '/')
+dirpath = strcat('data/', strrep(filename,'.csv',''), '/');
 gnp = prepgnplot(result);
 fileoutput = strcat(dirpath, "gnp-",strrep(filename,'.csv',''), ".text");
 gnsvplot(gnp, fileoutput);
