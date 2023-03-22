@@ -10,8 +10,8 @@ para.Kind = "g";
 para.Form = "a";
 para.varS = 1;
 para.data = resid;
-[result, intv, LowerCluster, UpperCluster, ERR] = zw_marginal_analysis_egdf(para);
 disp("calculating...")
+[result, intv, LowerCluster, UpperCluster, ERR] = zw_marginal_analysis_egdf(para);
 # gnp file generation and pdf
 dirpath = strcat('data/', strrep(filename,'.csv',''), '/');
 gnp = prepgnplot(result);

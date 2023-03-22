@@ -1,12 +1,13 @@
-# Created by Octave 7.3.0, Wed Mar 22 15:49:54 2023 CET <parmar@uchp-parmar.icpf.cas.cz>
+# Created by Octave 7.3.0, Wed Mar 22 16:04:21 2023 CET <parmar@uchp-parmar.icpf.cas.cz>
 # name: coefficients
 # type: matrix
-# rows: 5
+# rows: 6
 # columns: 1
- 149.0738735081658
- 149.07387350816583
- -0.79730849806274307
- -8.8044470517755951
- -2.1563092099653884
+ 148.95004944679684
+ 148.95004944679692
+ 0.16711021307893242
+ -9.6955211884816368
+ -0.67644305718293862
+ -2.2068344335982153
 
 
