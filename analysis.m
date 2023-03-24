@@ -26,4 +26,7 @@ plt_res = ResidPlot(filename, LegReg_result, intv, fn);
 # estimating the outliers from residuals
 rdata = OutliersRemover(filename, LegReg_result, intv, fn);
 
+# done
+msgbox("KaBoOm!");
+disp("Done!")
 endfunction
