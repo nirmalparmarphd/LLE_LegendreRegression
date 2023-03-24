@@ -66,7 +66,7 @@ xlabel('Mole Fraction');
 ylabel('Residuals');
 legend(strcat(plottitle, ' - LegReg Residuals'), 'Interval of Typical Data', 'Tolerance Interval','location','southoutside');
 plotoutput=strcat(dirpath, "/", strrep(filename,'.csv',''), "-Resid-X",".pdf");
-print(plotoutput);
+print(plotoutput, '-dpdf', '-S1200,720');
 plt = strcat('plot saved as_', plotoutput);
 disp(plt)
 endif

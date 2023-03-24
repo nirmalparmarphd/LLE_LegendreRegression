@@ -2,7 +2,7 @@
 ## usage:   LegReg_result = LegReg(filename,order,fn)
 ##          filename: ../data/filename.csv
 ##          order: polynomial degree
-##          fn = (X or T) select regression dependent variable
+##          fn: fitY = f(X or T) 
 
 function LegReg_result = LegReg(filename, order, fn);
 ## pkg import
@@ -22,10 +22,19 @@ end
 ## loading lle data
 lle_data = DataLoading(strcat("data/",filename));
 
+## arranind order of the data as per the function option
+if fn == "X"
+    [~, idx] = sort(lle_data(:,2),  'ascend');
+    lle_data = lle_data(idx,:)
+elseif fn == "T"
+    [~, idx] = sort(lle_data(:,3),  'ascend');
+    lle_data = lle_data(idx,:)
+end
+
 ## Data parsing to get X and Y values from LLE data
 [x_values, y_values] = DataParser(lle_data,fn);
 
-## MinMax transformaation of X vaues from LLE data
+## MinMax transformaation of X (2nd clm) values from LLE data
 x_minmax_matirx = MinMaxTransformer(x_values);
 
 ## regression of LLE data 

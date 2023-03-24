@@ -1,4 +1,10 @@
+# list of files need to ignore
 plots/*.pdf
 try.m
 octave-workspace
 try1.m
+data/*
+# to keep
+!data/propanol_175.csv
+!data/propanol_176.csv
+!data/propanol_175_176.csv
