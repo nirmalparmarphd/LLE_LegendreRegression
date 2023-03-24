@@ -2,6 +2,8 @@
 ## useage:	[x, y] = DataParser(data, fn)
 ##          data = LLE experimental data [Sr.No, X, T[K]]
 ##          fn = (X or T) select regression dependent variable
+##          data.csv file format: Sr.No, x(mole fraction), T[K]
+
 
 function [x_values, y_values] = DataParser(data, fn);
 

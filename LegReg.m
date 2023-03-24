@@ -20,7 +20,7 @@ if not(isfolder(dirpath))
 end
 
 ## loading lle data
-lle_data = DataLoading(strcat("data/",filename))
+lle_data = DataLoading(strcat("data/",filename));
 
 ## Data parsing to get X and Y values from LLE data
 [x_values, y_values] = DataParser(lle_data,fn);
@@ -47,4 +47,5 @@ matpath = strcat(dirpath, '/');
 save([matpath,'LegReg_result.mat'], 'LegReg_result');
 save([matpath,'LegReg_coef.mat'], 'coefficients');
 csvwrite([matpath,'LegReg_result.csv'], coefficients);
+disp(strcat('legendre regression output saved at:-', dirpath,'/'))
 endfunction

@@ -2,7 +2,7 @@
 
 filename = 'propanol_X-clean_data.csv';
 order = 4;
-fn = 'X';
+fn = 'T';
 
 # LLE data analysis 
 [LegReg_result, mg_result, intv, plt_reg, plt_res, rdata] = analysis(filename, order, fn);
