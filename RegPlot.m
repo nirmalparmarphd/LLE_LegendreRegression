@@ -27,6 +27,7 @@ end
 [x_values, y_values] = DataParser(lle_data,fn);
 
 ## plotting results
+figure(1);
 if fn == 'X';
 # fitY plot for mole fraction
 plot((2*x_values-1), y_values,'ok', (2*x_values-1), fitY, '-r')

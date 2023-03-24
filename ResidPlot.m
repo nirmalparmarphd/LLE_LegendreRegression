@@ -23,6 +23,7 @@ lb_intv = intv.LB;
 ub_intv = intv.UB;
 di_intv = abs(di_lb_intv) + abs(di_ub_intv);
 
+figure(2);
 # plotting result for X residuals
 if fn == 'X';
 plot(result.y, result.resid, 'ob');
@@ -42,7 +43,7 @@ xlabel('Tempearature [K]');
 ylabel('Residuals');
 legend(strcat(plottitle, ' - LegReg Residuals'), 'Interval of Typical Data', 'Tolerance Interval','location','southoutside');
 plotoutput=strcat(dirpath, "/", strrep(filename,'.csv',''), "-Resid-T",".pdf");
-print(plotoutput);
+print(plotoutput, '-dpdf', '-S1200,720');
 plt = strcat('plot saved as_', plotoutput);
 disp(plt)
 
@@ -65,7 +66,7 @@ hold off
 xlabel('Mole Fraction');
 ylabel('Residuals');
 legend(strcat(plottitle, ' - LegReg Residuals'), 'Interval of Typical Data', 'Tolerance Interval','location','southoutside');
-plotoutput=strcat(dirpath, "/", strrep(filename,'.csv',''), "-Resid-X",".pdf");
+plotoutput=strcat(dirpath, "/", strrep(filename,'.csv',''), fn,"-Resid-",".pdf");
 print(plotoutput, '-dpdf', '-S1200,720');
 plt = strcat('plot saved as_', plotoutput);
 disp(plt)

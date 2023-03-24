@@ -8,3 +8,7 @@ data/*
 !data/propanol_175.csv
 !data/propanol_176.csv
 !data/propanol_175_176.csv
+!data/propanol_X-clean_data.csv
+!data/hexanol_109.csv
+!data/hexanol_466.csv
+!data/hexanol_109_466.csv
